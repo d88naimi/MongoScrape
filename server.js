@@ -54,8 +54,10 @@ app.get("/scrape", function(req, res) {
   request("http://www.androidpolice.com/", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
+    console.log($("div.post h2").length);
+
     // Now, we grab every o-hit within an article tag, and do the following:
-    $("article h2").each(function(i, element) {
+    $("div.post h2").each(function(i, element) {
 
       // Save an empty result object
       var result = {};
