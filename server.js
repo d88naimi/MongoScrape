@@ -31,7 +31,7 @@ var uri = "mongodb://heroku_pwb2x39w:mkmnc1v9ker5t216f1bo0dbr8v@ds155191.mlab.co
 // heroku connect
 mongoose.connect(uri);
 
-mongoose.connect("mongodb://localhost/week18hw");
+// mongoose.connect("mongodb://localhost/week18hw");
 var db = mongoose.connection;
 
 
