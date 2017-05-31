@@ -35,7 +35,7 @@ mongoose.connect(uri);
 var db = mongoose.connection;
 
 //port number 
-var PORT = process.env.port || 8080; 
+var port = process.env.PORT || 8080; 
 
 // Show any mongoose errors
 db.on("error", function(error) {
@@ -163,6 +163,6 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 8080
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + " daveyHW!");
+app.listen(port, function() {
+  console.log("App running on port " + port + " daveyHW!");
 });
